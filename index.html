@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            padding: 0; margin: 0; box-sizing: border-box; font-family: sans-serif;
+        }
+        body{
+            background: url("./images/background.jpg");
+        }
+        #container{
+            height: 85vh; width: 65vw; margin: 10px auto; padding: 0.6rem; border-radius: 1rem; background-color: rgba(175, 224, 255, 0.7);  
+        }
+        h1{
+            text-align: center; padding: 1rem; color: rgb(0, 60, 99);
+        }
+        .players{
+            height: 50%; display: flex; justify-content: space-around; align-items: center; font-size: 1.5rem; font-weight: 700;
+        }
+        .players img{
+            height: 170px; width: 180px; border-radius: 50%; backdrop-filter: blur(5px);
+        }
+        h5{
+            text-align: center; color: rgb(233, 233, 233);
+        }
+        button{
+            all: unset; display: block; margin: 5px auto;  padding: 0.5rem 1rem; background-color: rgb(0, 60, 99); color: white;
+            border-radius: 0.1rem; cursor: pointer; &:hover {
+                background-color: rgb(1, 90, 149);
+            }
+        }
+        p{
+            text-align: center; font-size: 1rem; color: rgb(1, 25, 80);
+        }
+        #winner{
+            text-align: center; padding-top: 0.5rem ; color: white; text-shadow: 3px 3px 4px rgb(1, 25, 80);
+        }
+        #victory{
+            width: 120px; display: block; margin: 0px auto;
+        }
+        span{
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.5rem;
+        }
+        @media screen and (max-width: 1400px) {
+            #container{
+            height: auto; width: 65%; margin: 50px auto; } 
+            .players img{
+            height: 200px; width: 200px; ;
+        }
+        }
+        @media screen and (max-width: 1000px) {
+            #container{
+            height: auto; width: 80%; margin: 10px auto; } 
+            .players img{
+            height: 180px; width: 180px; ;
+        }
+        }
+        @media screen and (max-width: 480px) {
+            #container{
+            height: auto; width: auto; margin: 10px; } 
+            .players img{
+            height: 100px; width: 100px; ;
+        }
+        }
+        @media screen and (max-width: 320px) {
+            #container{
+            height: auto; width: auto; margin: 10px; padding: 0;} 
+            .players{
+            display: flex; flex-direction: column; font-size: 1rem; font-weight: 600;
+        }
+            .players img{
+            height: 100px; width: 100px; ;
+        }
+        }
+            
+    
+    </style>
+<body>
+
+    <div id="container">
+        <h1>TOSS GAME</h1>
+        <div class="players">
+            <div><img src="./images/player1.png"><h5>Player 1</h5><p id="player1Choice"></p></div>
+            <div><img src="./images/player2.png"><h5>Player 2</h5><p id="player2Choice"></p></div>   
+        </div>
+        <button onclick="tossStart()">Start game</button>
+        <h2 id="winner"></h2>
+    </div>
+    <span>Designed and developed by Mahanoor khan</span>
+
+    <script src="./script.js"></script>
+</body>
+</html>
